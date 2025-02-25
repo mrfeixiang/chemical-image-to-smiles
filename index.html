@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chemical Image to SMILES</title>
+    <!-- Load ChemDoodle library for rendering structures -->
+    <script src="https://web.chemdoodle.com/8.0.0/ChemDoodleWeb.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Upload Chemical Structure Images</h1>
+    <p>Upload images (PNG, JPEG) of chemical structures to get SMILES codes.</p>
+    <input type="file" id="imageUpload" multiple accept="image/*">
+    <button onclick="processImages()">Process Images</button>
+    <table id="resultsTable">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Structure</th>
+                <th>SMILES</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <button onclick="downloadCSV()" style="display: none;" id="downloadButton">Download CSV</button>
+</body>
+</html>
